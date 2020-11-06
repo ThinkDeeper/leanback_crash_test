@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Theme.LeanBackTest" parent="@style/Theme.Leanback" />
+
+    <style name="Theme.Vpn.Leanback.GuidedStep" parent="Theme.Leanback.GuidedStep">
+        <item name="guidedActionsElevation">0dp</item>
+
+    </style>
+</resources>

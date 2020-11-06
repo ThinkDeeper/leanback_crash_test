@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/guidanceContainerStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="36dp"
+    android:paddingEnd="36dp">
+
+    <ImageView
+        android:id="@+id/guidance_icon"
+        style="?attr/guidanceIconStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidance_title"
+        app:layout_constraintEnd_toStartOf="@id/guidance_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidance_title"
+        app:layout_goneMarginEnd="0dp"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/guidance_title"
+        style="?attr/guidanceTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:maxLines="2"
+        app:autoSizeMinTextSize="26sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/guidance_breadcrumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidance_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Already purchased"
+        tools:textSize="36sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/guidance_breadcrumb"
+        style="?attr/guidanceDescriptionStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@id/guidance_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidance_title"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/guidance_description"
+        style="?attr/guidanceDescriptionStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidance_breadcrumb"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
